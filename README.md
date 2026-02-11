@@ -93,8 +93,28 @@ python main.py
 - Ranking Score Display
 - Cloud Deployment
 
+## 🚀 How to Run
+
+1. Clone the repository
+git clone https://github.com/rohsh22ece-cmd/AI-Resume-Screener.git
+
+2. Install dependencies
+pip install -r requirements.txt
+
+3. Run the project
+python main.py
+
+## 📊 Sample Output
+
+Top Matching Resume:
+Score: 0.87
+Candidate: John Doe
+Matched Skills: Python, Machine Learning, NLP
+
 
 ## 👨‍💻 Author
 
 Rohit Shebinakatti  
 GitHub: https://github.com/rohsh22ece-cmd
+
+
