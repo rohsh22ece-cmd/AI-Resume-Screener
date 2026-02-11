@@ -53,22 +53,73 @@ AI-Resume-Screener/
 ├── requirements.txt
 └── sample_resume.pdf
 
-## ⚙ Installation & Setup
+## 🗄️ How Endee Vector Database is Used
 
-### 1️⃣ Clone Repository
+Endee is used as the core vector database for storing and searching resume embeddings.
+
+### Step-by-Step Flow:
+
+1. Resume PDF is uploaded.
+2. Text is extracted using the PDF parser.
+3. Extracted text is converted into numerical embeddings using Sentence Transformers.
+4. The embeddings are stored inside the Endee Vector Database.
+5. When a job description is entered:
+   - It is also converted into an embedding.
+6. Endee performs semantic similarity search between:
+   - Job description embedding
+   - Stored resume embeddings
+7. Endee returns the most similar resumes ranked by similarity score.
+
+### Why Endee?
+
+- High performance vector indexing
+- Fast similarity search
+- Efficient storage of embedding vectors
+- Suitable for RAG and Semantic Search applications
+
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
 
 git clone https://github.com/rohsh22ece-cmd/AI-Resume-Screener.git
+
 cd AI-Resume-Screener
 
 
-### 2️⃣ Install Dependencies
+### 2️⃣ Create Virtual Environment (Recommended)
+
+python -m venv venv
+
+Activate:
+
+Windows:
+venv\Scripts\activate
+
+Mac/Linux:
+source venv/bin/activate
+
+
+### 3️⃣ Install Dependencies
 
 pip install -r requirements.txt
 
 
-### 3️⃣ Run the Project
+### 4️⃣ Run the Application
 
 python main.py
+
+
+## ▶️ Execution Flow
+
+- Place resume PDFs inside the project folder
+- Run the program
+- Enter job description when prompted
+- System will return:
+  - Similarity score
+  - Best matching resume
+
+
 
 
 ## 💡 Features
